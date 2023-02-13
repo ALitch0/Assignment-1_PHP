@@ -69,3 +69,6 @@ transition: width 1s;
     color: red;
     font-weight: bold;
 }
+nav ul li{
+    list-style-type:none;
+}

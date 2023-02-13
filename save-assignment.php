@@ -44,7 +44,7 @@
         //Sql insert
         $sql = "INSERT INTO assignment_info (assignment, assignment_desc,deadline,course_name) VALUES (:assignment, :assignment_desc, :deadline, :course_name); ";
 
-        //map each input to the corresponding db column
+        //prepare and bind
         $cmd = $db->prepare($sql);
         $cmd->bindParam(':assignment', $assignment, PDO::PARAM_STR, 100);
         $cmd->bindParam(':assignment_desc', $assignment_desc, PDO::PARAM_STR, 1500);
@@ -61,5 +61,7 @@
         echo 'The assignment info has been saved.';
     }
     ?>
+    <br>
+    <a href="index.php">Assignment register Page</a>
 </body>
 </html>

@@ -16,6 +16,7 @@
     </header>
     <!--Main-->
     <main>
+        <section>
         <h2>Add new Assignments here...</h2>
         <!--form to "save-assignment.php" through post method-->
         <form action="save-assignment.php" method="post">
@@ -55,20 +56,58 @@
                     foreach($course as $coursename){
                         echo '<option>' .$coursename['course_name']. '</option>';
                     }
-                    //disconnect
-                    $db = null;
+                    
                     ?>
                 </select>
             </fieldset>
             <button class="button">Post</button>
         </form>
+        </section>
+        <!--deleting entry-->
+        <section>
+        <h2>Delete Existing Assignment entry</h2>
+        <form action="delete.php" method="POST">
+            <fieldset>
+        <label for="assignmentName">Assignment Name:</label>
+        <select type="text" id="assignmentName" name="assignmentName" required>
         <?php
+
+            //use select to fetch data
+            $sql="SELECT * FROM assignment_info;";
+
+            //run query
+            $cmd = $db->prepare($sql);
+            $cmd->execute();
+            $infos = $cmd->fetchall();
             
+            //loop through the data
+            foreach($infos as $info ){
+            echo '<option>'.$info['assignment'].'</option>' ;
+            }
+
+            //disconnect
+                    $db = null;
         ?>
+        </select>
+        </fieldset>
+        <button class="button">Post</button>
+        </form>
+        </section>
     </main>
     <!--Footer-->
     <footer>
-
+    <footer>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.php">Assignment Register</a>
+                </li>
+                <li>
+                    <a href="assignments.php">View All Assignments</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
     </footer>
 </body>
 

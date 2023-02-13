@@ -52,5 +52,16 @@
     $db = null;
     ?>
     </main>
+    <!--Footer-->
+    <footer>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.php">Assignment Register</a>
+                    <a href="assignments.php">View All Assignments</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>
