@@ -69,6 +69,10 @@ transition: width 1s;
     color: red;
     font-weight: bold;
 }
+footer{
+    width: 60%;
+    margin: 0 auto;
+}
 nav ul li{
-    list-style-type:none;
+    display: flex;
 }

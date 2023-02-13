@@ -96,7 +96,7 @@
     </main>
     <!--Footer-->
     <footer>
-    <footer>
+        <p>Navigation</p>
         <nav>
             <ul>
                 <li>
@@ -107,7 +107,6 @@
                 </li>
             </ul>
         </nav>
-    </footer>
     </footer>
 </body>
 

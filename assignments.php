@@ -54,10 +54,13 @@
     </main>
     <!--Footer-->
     <footer>
+    <p>Navigation</p>
         <nav>
             <ul>
                 <li>
                     <a href="index.php">Assignment Register</a>
+                </li>
+                <li>
                     <a href="assignments.php">View All Assignments</a>
                 </li>
             </ul>
